@@ -1,0 +1,110 @@
+body {
+    background: #F8F8F8 !important;
+}
+
+.nav {
+    border-radius: 0px !important;
+    padding: 10px 0 10px 0 !important;
+    background-color: #768fda !important;
+
+}
+
+.circular-avatar {
+    width: 150px; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensure the image fills the circular area */
+    border-radius: 100%; /* Create a circular shape */
+}
+
+
+.curved-underline {
+    display: inline-block;
+    font-family: 'Comic Sans MS', cursive !important;
+    font-size: 30px;
+    color: rgb(253, 251, 251) !important;
+    font-weight: bold !important;
+    position: relative;
+}
+
+.curved-underline::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px; /* Adjust the height to your desired underline thickness */
+    background: rgb(253, 251, 251); /* Match the background color of your text */
+    border-radius: 50%;
+    position: absolute;
+    bottom: -5px; /* Adjust this value to position the underline appropriately */
+    left: 0;
+    transform: scaleX(1);
+    transform-origin: 100% 0;
+    transition: transform 0.3s ease;
+}
+
+.curved-underline::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px; /* Adjust the height to your desired underline thickness */
+    background: rgb(253, 251, 251); /* Match the background color of your text */
+    border-radius: 50%;
+    position: absolute;
+    bottom: -5px; /* Adjust this value to position the underline appropriately */
+    right: 0;
+    transform: scaleX(1);
+    transform-origin: 100% 0;
+    transition: transform 0.3s ease;
+}
+
+.curved-underline:hover::after,
+.curved-underline:hover::before {
+    transform: scaleX(0);
+}
+
+.round-avatar {
+    width: 250px; /* Adjust the size as needed */
+    height: 250px; /* Adjust the size as needed */
+    border-radius: 50%; /* Create a circular shape */
+    object-fit: fill; /* Ensure the image fills the circular area */
+}
+
+
+.mb-7 {
+    margin-bottom: 7px !important;
+}
+
+.mt-5 {
+    margin-top: 5px !important;
+}
+
+.mymodal {
+    height: 300px !important;
+    top: 200px !important;
+    font-size: 20px !important;
+}
+
+.mb-5 {
+    margin-bottom: 5px !important;
+}
+
+w-big {
+    width: 100% !important;
+}
+
+.bwhite-lg {
+    background-color: transparent !important;
+}
+
+.bwhite-sm {
+    background-color: transparent !important;
+    width: 10px !important;
+}
+
+.comment-box {
+    display: none;
+}
+
+.mb-2 {
+    margin-bottom: 2px !important;
+}
+
