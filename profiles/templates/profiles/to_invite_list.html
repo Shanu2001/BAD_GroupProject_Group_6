@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+invite friends
+{% endblock title %}
+
+{% block content %}
+
+    {% if is_empty %}
+            <h1>All invites are accepted</h1>
+    {% endif %}
+
+
+    {% for obj in qs %}
+    <div class="ui segment">
+        <div class="ui grid">
+            <div class="row">
+                <div class="five wide column">
+                    <img class="ui circular-avatar" src={{obj.avatar.url}}>  
+                    <br>
+                    <a href={{obj.get_absolute_url}}><button class="ui primary button w-big mb-5">View Profile</button></a>
+                </div>
+                <div class="eleven wide column"> 
+                    <form action="{% url 'profiles:send-invite' %}" method="POST">
+                        <h3>{{obj.user}}</h3>
+                        {% csrf_token %}
+                        <input type="hidden" name="profile_pk" value={{obj.pk}}>
+                        <button type="submit" class="ui basic blue button w-big mb-5"><i class= "smile icon"></i>Invite sent</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}                
+    {% endblock content %}
