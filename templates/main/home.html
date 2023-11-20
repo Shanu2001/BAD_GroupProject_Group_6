@@ -9,11 +9,10 @@ home
     <div class="ui sixteen wide column">
         <div id="slideshow-container" style="position: relative; width: 800px; height: 500px; overflow: hidden;">
             <div id="slideshow" class="ui fluid image" style="display: flex;">
-                <img class="slide" src="https://i.pinimg.com/736x/71/27/d8/7127d82a5baac10c19d63a8ab35c7957.jpg" alt="Image 1" style="object-fit: contain; width: 100%; height: 100%;">
-                <img class="slide active" src="https://i.pinimg.com/564x/a2/5c/4c/a25c4c9a0e74ff7577244ced754a8ecd.jpg" alt="Image 2" style="object-fit: contain; width: 100%; height: 100%;">
-                <img class="slide" src="https://i.pinimg.com/564x/87/66/25/876625849713c8a4e1305dd28fa51c70.jpg" alt="Image 3" style="object-fit: contain; width: 100%; height: 100%;">
-                <img class="slide active" src="https://i.pinimg.com/564x/d4/ca/82/d4ca82b28da5d1498c1003c93318c13c.jpg" alt="Image 4" style="object-fit: contain; width: 100%; height: 100%;">
-                <!-- Add more images as needed -->
+                <img class="slide" src="https://drive.google.com/uc?id=1fWDFQmVuXKE3n7CnYxe_HIiAUE3kyokD" alt="Image 1" style="object-fit: contain; width: 100%; height: 100%;">
+                <img class="slide active" src="https://drive.google.com/uc?id=1y0CDp8MK31LmhO4uiEBBo9LdxPVctVjD" alt="Image 2" style="object-fit: contain; width: 100%; height: 100%;">
+                <img class="slide" src="https://drive.google.com/uc?id=1igCbC78YhKhfEBo9qCKTrLH84cV7NP1W" alt="Image 3" style="object-fit: contain; width: 100%; height: 100%;">
+                <img class="slide active" src="https://drive.google.com/uc?id=1ye3VeOxdFY5Qi--QpVSi_lj5YGgLkI77" alt="Image 1" style="object-fit: contain; width: 100%; height: 100%;">
             </div>
             <button id="prevBtn" class="ui button" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%);">❮</button>
             <button id="nextBtn" class="ui button" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%);">❯</button>
@@ -40,7 +39,7 @@ $(document).ready(function(){
     setInterval(function() {
         currentSlide = (currentSlide + 1) % $('.slide').length;
         showSlide(currentSlide);
-    }, 5000); // Change the interval as needed (in milliseconds)
+    }, 3000); // Change the interval as needed (in milliseconds)
 
     // Manual navigation
     $('#prevBtn').on('click', function() {
