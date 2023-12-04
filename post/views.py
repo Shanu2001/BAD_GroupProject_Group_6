@@ -24,7 +24,7 @@ def posts_comment_create_and_list_view(request):
 
     profile = Profile.objects.get(user=request.user)
 
-    if "submit_post_form" in request.POST:
+    if "submit_p_form" in request.POST:
         print(request.POST)
         p_form = PostModelForm(request.POST, request.FILES)
         if p_form.is_valid():
@@ -35,7 +35,7 @@ def posts_comment_create_and_list_view(request):
             post_added = True
 
 
-    if "submit_comment_form" in request.POST:
+    if "submit_c_form" in request.POST:
         c_form = CommentModelForm(request.POST)
         if c_form.is_valid():
             instance = c_form.save(commit=False)
