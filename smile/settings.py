@@ -58,7 +58,7 @@ ACCOUNT_EMAIL_UNIQUE = True
 # ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
 if DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
